@@ -9,9 +9,6 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
   }
-  body {
-    margin: 2em;
-  }
   body, input[type="text"], button {
     color: #333;
     font-family: Cambria, Georgia;
@@ -19,4 +16,22 @@ h1 {
   /* everywhere else */
   * {
     font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .basicContainer {
+    margin: 0 auto !important;
+    float: none !important;
+  }
+
+  .innerContainer {
+    margin: 0 auto !important;
+    float: none !important; 
+  }
+
+  .btnNav {
+    color: azure;
+    background-color: cadetblue;
+    font-size: large;
+    padding: 1em;
+    min-width: 150px;
   }

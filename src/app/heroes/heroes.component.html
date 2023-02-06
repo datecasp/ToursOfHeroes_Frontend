@@ -1,19 +1,25 @@
-<h2>My Heroes</h2>
 <div>
-  <label>Hero name:
-    <input #heroName />
-  </label>
-  <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(heroName.value); heroName.value=''">
-    add
-  </button>
+  <div class="col-md-6">
+    <h2>My Heroes</h2>
+    <div>
+      <label
+        >Hero name:
+        <input #heroName />
+      </label>
+      <!-- (click) passes input value to add() and then clears the input -->
+      <button (click)="add(heroName.value); heroName.value = ''" class="btnAdd">
+        add
+      </button>
+    </div>
+    <ul class="heroes">
+      <li *ngFor="let hero of heroes">
+        <a routerLink="/heroes/{{ hero.heroId }}">
+          <span class="badge">{{ hero.heroId }}</span> {{ hero.name }}
+          <button class="badgeSuffix" title="hero" (click)="delete(hero)">
+            x
+          </button>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
-<ul class="heroes">
-  <li *ngFor="let hero of heroes">
-    <a routerLink="/heroes/{{hero.heroId}}">
-      <span class="badge">{{hero.heroId}}</span> {{hero.name}}
-      <button class="delete" title="delete hero"
-      (click)="delete(hero)">x</button>
-    </a>
-  </li>
-</ul>

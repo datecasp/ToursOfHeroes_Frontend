@@ -1,6 +1,5 @@
 /* HeroesComponent's private CSS styles */
 .heroes {
-  margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
   width: 15em;
@@ -50,6 +49,22 @@
   border-radius: 4px 0 0 4px;
 }
 
+ .badgeSuffix {
+  display: flex;
+  font-size: large;
+  color: white;
+  background-color: tomato;
+  line-height: 1em;
+  position: absolute;
+  right: -8px;
+  top: -4px;
+  height: 1.8em;
+  min-width: 16px;
+  text-align: left;
+  margin-left: .8em;
+  border-radius: 4px 4px;
+}
+
 button {
   background-color: #eee;
   border: none;
@@ -64,10 +79,6 @@ button:hover {
   background-color: #cfd8dc;
 }
 
-button.delete {
-  position: relative;
-  left: 194px;
-  top: -32px;
-  background-color: gray !important;
-  color: white;
+.btnAdd{
+  background-color: lightgreen;
 }
